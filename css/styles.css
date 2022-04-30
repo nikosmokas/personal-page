@@ -168,4 +168,8 @@ hr {
         width: 80%;
     }
 
+    .skill1-img, .skill2-img {
+        height: 6rem;
+        width: 6rem;
+    }
 }
