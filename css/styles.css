@@ -131,6 +131,11 @@ a:hover {
   text-decoration: none;
 }
 
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .bottom-container {
   margin-top: 4rem;
   padding: 1rem;
@@ -154,37 +159,6 @@ a:hover {
 .dropdown-menu a:hover {
   background-color: #f8f9fa; /* Change background color on hover */
   color: black !important; /* Change text color on hover */
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #333; /* Change the background color as needed */
-  z-index: 1000; /* Ensure the navbar stays above other content */
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  background-color: #ddd; /* Change the background color on hover */
-  color: black;
-}
-
-.navbar {
-  display: flex; /* Makes navbar items horizontal */
-  justify-content: space-between; /* Distributes items with even space */
-}
-
-.navbar-spacer {
-  flex: 1; /* Fills the remaining space */
 }
 
 hr {

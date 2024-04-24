@@ -18,24 +18,38 @@
 
 <body>
 
-  <div class="navbar">
-    <a href="#home">Home</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#home">Home</a>
 
-    <div class="btn-group">
-      <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Projects
-      </button>
-      <div class="dropdown-menu">
-          <a class="dropdown-item" href="http://nmokas-dev.tech:8080/" target="_blank">Wallet Management</a>
-          <a class="dropdown-item" href="https://github.com/nikosmokas/Chatroom" target="_blank">Chatroom</a>
-      </div>
-  </div>
-  
-    <div class="navbar-spacer"></div>
-  
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-  </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Projects
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="http://nmokas-dev.tech:8080/" target="_blank">Wallet Management</a>
+                    <a class="dropdown-item" href="https://github.com/nikosmokas/Chatroom" target="_blank">Chatroom</a>
+          </div>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+
+   
+  </nav>
+
   
     
     <!-- header  -->
@@ -50,7 +64,7 @@
     <!-- Personal info  -->
     <div class="middle-container container-fluid">
         <div class="profile">
-          <img class = "profile-pic" src="imgs/me.png" alt="a picture of nick">
+          <img class = "profile-pic" src="imgs/me.jpeg" alt="a picture of nick">
           <h2>Hello.</h2>
           <p class = "personal-info">Electrical and Computer Engineer, from the Universty of Thessaly in Volos, with a background in Software Engineering, specializing in Java development. Currently honing skills at Intracom-Telecom, focusing on back-end development and database integration. Proven ability in unit testing, deployment automation, and contributing to collaborative design discussions. Actively engaged in personal projects, including a Wallet Management web app and a Chatroom application, demonstrating a passion for innovation.
 
