@@ -19,9 +19,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="#home">Home</a>
     
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,14 +27,16 @@
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
+        <a class="nav-item nav-link active" href="#home">Home</a>
         <a class="nav-item nav-link active" href="https://github.com/nikosmokas/" target="_blank">Github</a>
         <li class="nav-item dropdown active">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Projects
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="https://api-tester.nmokas-dev.tech/" target="_blank">Automated API Tester</a>
             <a class="dropdown-item" href="https://wallet-management.nmokas-dev.tech/" target="_blank">Wallet Management</a>
-                    <a class="dropdown-item" href="https://github.com/nikosmokas/Chatroom" target="_blank">Chatroom</a>
+            <a class="dropdown-item" href="https://github.com/nikosmokas/Chatroom" target="_blank">Chatroom</a>
           </div>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -55,22 +55,23 @@
   
     
     <!-- header  -->
-    <div id="home" class="top-container container-fluid">
-        <img class="top-cloud" src="imgs/cloud.png" alt="clouds">
-        <h1>I'm Nick</h1>
-        <h2>an Electrical and Computer Engineer.</h2>
-        <img class="bottom-cloud" src="imgs/cloud.png" alt="clouds">
-        <img id="about" class="mountains" src="imgs/mountain.png" alt="mountain">
+    <div id="home" class="top-container container-fluid background-image-container">
+      <img src="imgs/mountains.png" alt="Mountains">
+      <h1>I am Nikos</h1>
+      <h2>an Electrical and Computer Engineer.</h2>
     </div>
+  
 
     <!-- Personal info  -->
     <div class="middle-container container-fluid">
         <div class="profile">
           <img class = "profile-pic" src="imgs/me.jpeg" alt="a picture of nick">
           <h2>Hello.</h2>
-          <p class = "personal-info">Electrical and Computer Engineer, from the Universty of Thessaly in Volos, with a background in Software Engineering, specializing in Java development. Currently honing skills at Intracom-Telecom, focusing on back-end development and database integration. Proven ability in unit testing, deployment automation, and contributing to collaborative design discussions. Actively engaged in personal projects, including a Wallet Management web app and a Chatroom application, demonstrating a passion for innovation.
-
-            I love programming, snowboarding, hiking, coffee, peace and quiet.</p>
+          <p class="personal-info">
+            Proactive Electrical and Computer Engineer from the University of Thessaly with a specialization in back-end development and DevOps practices. Currently honing skills at Intracom-Telecom, focusing on Java-based back-end development, unit testing, and deployment automation. Experienced in implementing CI/CD pipelines, managing cloud infrastructure, and optimizing software processes. Actively engaged in personal projects, including an Automated API Testing application and a Wallet Management web app, demonstrating a passion for innovation and problem-solving.
+            <br>
+            I enjoy programming, snowboarding, hiking, coffee, and tranquility.
+          </p>
         </div>
 
         <hr id="skills">
@@ -78,8 +79,9 @@
           <div class="skill-row">
             <img class="skill1-img" src="imgs/comput.jpg" alt="picture of a computer processing unit">
             <h3>Digital Skills</h3>
-            <p>Java, Databases (MySQL, PostgreSQL), SQL, Object-Oriented Programming,
-              Unit-Testing, Java Selenium, Git, Linux, Jenkins, Frameworks: Spring, Spring Boot, Thymeleaf(Template engine)</p>
+            <p>
+              Java, MySQL, PostgreSQL, Object-Oriented Programming, Unit Testing, Selenium, React, Node.js, Git, Linux, Docker, AWS (EC2, Lambda), Terraform, Spring, Spring Boot, Kubernetes (beginner)
+            </p>
           </div>
           <div class="skill-row">
             <img class="skill2-img" src="imgs/elect.png" alt="photo of power transimission tower">
@@ -101,7 +103,7 @@
       <div class="bottom-container container-fluid">
         <a class="footer-link" href="https://www.linkedin.com/in/nikolaos-mokas-249204185/">LinkedIn</a>
         <a class="footer-link" href="https://www.facebook.com/LeMokasNik">Facebook</a>
-        <p class="copyright"><em>© Nick Mokas</em></p>
+        <p class="copyright"><em>© Nikos Mokas</em></p>
       </div>
     </div>
     

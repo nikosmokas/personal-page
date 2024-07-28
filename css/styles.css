@@ -1,39 +1,102 @@
 body {
   margin: 0;
-  font-family: "Merriweather", serif;
-  color: #40514e;
+  font-family: 'Montserrat', sans-serif;
+  color: #eaf6f6;
+  background-color: #121212;
   text-align: center;
 }
 
+
 h1 {
   color: #66bfbf;
-  font-size: 5.62rem;
-  font-family: "Sacramento", cursive;
-  margin-top: 50px auto 0 auto;
+  font-size: 4rem;
+  margin-top: 0;
 }
 
 h2 {
-  margin-top: 3.25rem;
-  font-family: "Montserrat", sans-serif;
+  margin-top: 1rem;
   color: #66bfbf;
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 2rem;
+}
+
+.top-container {
+  position: relative;
+  height: 100vh; /* Full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #6f6f6f;
+}
+
+/* Container styling */
+.background-image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Image styling */
+.background-image-container img {
+  position: absolute;
+  bottom: 0; /* Ensure the bottom of the image is always aligned with the bottom of the container */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom; /* Align the bottom of the image with the bottom of the container */
+  opacity: 0.84; /* Adjust the opacity as needed */
+  z-index: 0; /* Ensure the image is behind the text */
+}
+
+/* Text styling */
+.background-image-container h1,
+.background-image-container h2 {
+  position: relative;
+  z-index: 1; /* Ensure the text is above the image */
+  margin: 0;
+  color: white; /* Make text visible against the background */
+  top: -220px; /* Adjust this value to move the text up */
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Responsive text size adjustments */
+@media (max-width: 991px) {
+  .background-image-container h1 {
+    font-size: 3rem;
+    top: -150px; /* Adjust this value for smaller screens */
+  }
+
+  .background-image-container h2 {
+    font-size: 1.5rem;
+    top: -150px; /* Adjust this value for smaller screens */
+  }
+}
+h1, h2 {
+  position: relative;
+  z-index: 1; /* Ensure the text is above the background */
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 h3 {
   color: #11999e;
-  font-family: "Montserrat", sans-serif;
 }
 
 p {
-  line-height: 2;
+  line-height: 1.6;
+  margin: 0 10%;
 }
 
 a {
-  color: #11999e;
-  padding: 1rem;
+  color: #66bfbf;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
 
@@ -41,36 +104,55 @@ a:hover {
   color: #eaf6f6;
 }
 
+.navbar {
+  padding: 0.5rem 2rem;
+  background-color: #1f1f1f !important;
+}
+
+/* Centering the navbar items a bit more */
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.nav-item {
+  margin: 0 10px; /* Adjust as needed */
+}
+
+.nav-link, .navbar-brand {
+  color: #eaf6f6 !important;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+  color: #66bfbf !important;
+}
+
+.navbar-toggler {
+  border-color: #66bfbf;
+}
+
+.navbar-toggler-icon {
+  color: #eaf6f6;
+}
+
 .top-container {
-  background-color: #222831;
-  margin: 0px;
   padding-top: 100px;
 }
 
-.top-cloud {
-  position: relative;
-  left: 400px;
-  bottom: 30px;
-}
-.bottom-cloud {
-  position: relative;
-  right: 400px;
-  top: 50px;
-}
-
-.mountains {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .profile {
-  width: 30%;
-  margin: 100px auto 100px auto;
+  width: 80%;
+  margin: 50px auto;
 }
+
 .profile-pic {
-  width: 40%;
+  width: 150px;
   border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
 }
 
 .skill1-img {
@@ -89,57 +171,40 @@ a:hover {
   margin-left: 30px;
 }
 
-.skill-row {
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
-}
-
 .contact-me {
-  width: 50%;
-  margin: 6rem auto 6rem auto;
-  line-height: 3;
+  width: 80%;
+  margin: 4rem auto;
+  line-height: 1.6;
 }
 
 .btn_contact {
-  background: #66bfbf;
-  background-image: -webkit-linear-gradient(top, #66bfbf, #2980b9);
-  background-image: -moz-linear-gradient(top, #66bfbf, #2980b9);
-  background-image: -ms-linear-gradient(top, #66bfbf, #2980b9);
-  background-image: -o-linear-gradient(top, #66bfbf, #2980b9);
-  background-image: linear-gradient(to bottom, #66bfbf, #2980b9);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
+  background: #11999e;
+  border: none;
   border-radius: 28px;
-  -webkit-box-shadow: 0px 1px 3px #666666;
-  -moz-box-shadow: 0px 1px 3px #666666;
-  box-shadow: 0px 1px 3px #666666;
-  font-family: Arial;
   color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
+  font-size: 1rem;
+  padding: 10px 20px;
   text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
 }
 
 .btn_contact:hover {
-  background: #11999e;
-  background-image: -webkit-linear-gradient(top, #11999e, #3498db);
-  background-image: -moz-linear-gradient(top, #11999e, #3498db);
-  background-image: -ms-linear-gradient(top, #11999e, #3498db);
-  background-image: -o-linear-gradient(top, #11999e, #3498db);
-  background-image: linear-gradient(to bottom, #11999e, #3498db);
-  text-decoration: none;
-}
-
-.navbar {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  background: #66bfbf;
 }
 
 .bottom-container {
-  margin-top: 4rem;
   padding: 1rem;
-  background-color: #222831;
+  background-color: #1f1f1f;
+}
+
+.footer-link {
+  color: #66bfbf;
+  margin: 0 10px;
+}
+
+.footer-link:hover {
+  color: #eaf6f6;
 }
 
 .copyright {
@@ -149,45 +214,36 @@ a:hover {
 }
 
 .dropdown-menu {
-  background-color: white; /* Set background color to white */
+  background-color: #1f1f1f;
 }
 
 .dropdown-menu a {
-  color: black !important; /* Set text color to black */
+  color: #eaf6f6 !important;
 }
 
 .dropdown-menu a:hover {
-  background-color: #f8f9fa; /* Change background color on hover */
-  color: black !important; /* Change text color on hover */
+  background-color: #121212;
+  color: #66bfbf !important;
 }
 
 hr {
-  width: 9%;
-  height: 1rem;
-  border-top: 10px dotted #060607;
-  background-color: white;
-  margin: auto;
+  width: 10%;
+  border-top: 2px solid #66bfbf;
+  margin: 40px auto;
 }
 
 @media (max-width: 991px) {
-  .top-cloud {
-    position: static;
-    margin-bottom: 3rem;
+  .profile, .skill-row, .contact-me {
+    width: 90%;
   }
-  .bottom-cloud {
-    position: static;
-    margin: 1.5rem auto;
+  
+  .skill-row {
+    flex-direction: column;
+    text-align: center;
   }
-  .mountains,
-  .profile,
-  .skill-row,
-  .contact-me {
-    width: 80%;
-  }
-
-  .skill1-img,
-  .skill2-img {
-    height: 6rem;
-    width: 6rem;
+  
+  .skill-row img {
+    margin-bottom: 20px;
+    margin-right: 0;
   }
 }
