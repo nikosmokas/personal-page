@@ -55,14 +55,15 @@ h2 {
   z-index: 0; /* Ensure the image is behind the text */
 }
 
+
 /* Text styling */
 .background-image-container h1,
 .background-image-container h2 {
-  position: relative;
   z-index: 1; /* Ensure the text is above the image */
   margin: 0;
+  top: -180px;
   color: white; /* Make text visible against the background */
-  top: -220px; /* Adjust this value to move the text up */
+
   text-shadow: 1px 1px 2px black;
 }
 
@@ -226,6 +227,39 @@ hr {
   width: 10%;
   border-top: 2px solid #66bfbf;
   margin: 40px auto;
+}
+
+.overlay-images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; /* Adjust the space between containers */
+  margin: 20px 0; /* Adjust the margin around the container if needed */
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 45%; /* Adjust width to ensure they fit side by side */
+}
+
+.project-container h4 {
+  margin-bottom: 10px; /* Adjust the space between the title and the image */
+  text-align: center;
+}
+
+.overlay-images img {
+  width: 450px; /* Ensures image uses the full width of the container */
+  height: 250px;
+  border-radius: 8px; /* Optional: Add some border radius for better aesthetics */
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.project-container a:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 @media (max-width: 991px) {
