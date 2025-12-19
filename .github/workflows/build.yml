@@ -1,0 +1,36 @@
+name: Build Personal Page
+
+on:
+  push:
+    branches:
+      - dev
+      - prod
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set image tag
+        id: vars
+        run: |
+          if [ "${GITHUB_REF##*/}" == "dev" ]; then
+            echo "TAG=dev-${GITHUB_SHA::7}" >> $GITHUB_ENV
+          else
+            echo "TAG=prod-${GITHUB_SHA::7}" >> $GITHUB_ENV
+          fi
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t ghcr.io/${{ github.repository }}:${{ env.TAG }} .
+          docker push ghcr.io/${{ github.repository }}:${{ env.TAG }}
